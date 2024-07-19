@@ -1,0 +1,30 @@
+
+After testing three models with 20%, 50%, and 70% data, 
+I found that the higher the percentage of data utilised for testing, the lower the model's accuracy.
+
+This is shown by the accuracy percentage calculations using this formula:
+
+knn.score(X=X_test, y=y_test) * 100
+
+The above formula gives the following scores.
+
+20% Testing:  98.61111111111111
+
+50% Testing:  97.55283648498332
+
+70% Testing:  96.89984101748807
+
+These results demonstrate that more testing data lowers accuracy. 
+Supervised learning requires a compromise between training and testing datasets. 
+Insufficient training data, where most of the data is used for testing, 
+meaning the model has less knowledge to generate predictions and may result in:
+
+Ovefitting—With less data to learn from, the model may not capture data patterns and relationships.
+Thus, it may perform well on training data but poorly on test data. This is overfitting.
+
+Underfitting - The model may be too simplistic to reflect the data's complexity, resulting in poor performance on both training and test data.
+
+Unreliable Performance - A short training set can make the model's performance sensitive to certain data points.
+Model performance can fluctuate significantly with small training data changes. 
+If the model has large variation, it may perform well on some data subsets but badly on others. 
+Such inconsistency can make the model unreliable.
